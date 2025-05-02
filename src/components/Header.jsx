@@ -7,6 +7,8 @@ const Header = () => {
         <ul className='flex '>
             <li><Link to='map'>Map</Link></li>
             <li><Link to='3d'>3D Cube</Link></li>
+            <li><Link to='pt'>Practice </Link></li>
+            
         </ul>
 
         <Outlet />

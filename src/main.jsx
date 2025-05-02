@@ -9,6 +9,9 @@ import {
 import ThreeD from './components/threeD.jsx'
 import Header from './components/Header.jsx';
 import Map from './components/Map.jsx';
+import Practice from './components/Practice.jsx';
+import firebaseConfig from '../firebase.config.js';
+
 
 
 const router = createBrowserRouter([
@@ -23,7 +26,13 @@ const router = createBrowserRouter([
       {
         path: "3d",
         element: <ThreeD/>,
+      },
+      {
+        path: "pt",
+        element:<Practice/>,
       }
+    
+    
     ]
     
   },
