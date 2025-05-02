@@ -10,6 +10,7 @@ import ThreeD from './components/threeD.jsx'
 import Header from './components/Header.jsx';
 import Map from './components/Map.jsx';
 import Practice from './components/Practice.jsx';
+import Games from './components/Games.jsx';
 import firebaseConfig from '../firebase.config.js';
 
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "pt",
         element:<Practice/>,
+      },
+      {
+        path: "games",
+        element:<Games/>,
       }
     
     
