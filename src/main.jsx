@@ -12,6 +12,8 @@ import Map from './components/Map.jsx';
 import Practice from './components/Practice.jsx';
 import Games from './components/Games.jsx';
 import firebaseConfig from '../firebase.config.js';
+import WebCam from './components/WebCam.jsx';
+import HelpfulWebsites from './components/HelpfulWebsites.jsx';
 
 
 
@@ -35,7 +37,15 @@ const router = createBrowserRouter([
       {
         path: "games",
         element:<Games/>,
-      }
+      },
+      {
+        path: "webcam",
+        element:<WebCam/>,
+      },
+      {
+        path: "websites",
+        element:<HelpfulWebsites/>,
+      },
     
     
     ]

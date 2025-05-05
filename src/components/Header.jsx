@@ -9,7 +9,8 @@ const Header = () => {
             <li><Link to='3d'>3D Cube</Link></li>
             <li><Link to='pt'>Practice </Link></li>
             <li><Link to='games'>Games</Link></li>
-            
+            <li><Link to='webcam'>WebCam</Link></li>
+            <li><Link to='websites'>Helpful Websites</Link></li>
         </ul>
 
         <Outlet />
