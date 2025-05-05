@@ -6,8 +6,8 @@ const WebCam = () => {
   const webcamRef = useRef(null);
   const modelRef = useRef(null);
   const [message, setMessage] = useState('');
-  const modelURL = 'https://teachablemachine.withgoogle.com/models/QyLX-zMPg/model.json';
-  const metadataURL = 'https://teachablemachine.withgoogle.com/models/QyLX-zMPg/metadata.json';
+  const modelURL = 'https://teachablemachine.withgoogle.com/models/2-e3bfKlu/model.json';
+  const metadataURL = 'https://teachablemachine.withgoogle.com/models/2-e3bfKlu/metadata.json';
 
   const loadModel = async () => {
     modelRef.current = await tmImage.load(modelURL, metadataURL);
@@ -23,11 +23,11 @@ const WebCam = () => {
       const prediction = await modelRef.current.predict(webcamRef.current.video);
       console.log(prediction); // Debug log
       prediction.forEach(pred => {
-        if (pred.probability > 0.7) {  // Lower threshold for testing
-          if (pred.className === 'Good Luck') {
-            setMessage('Good 👍');
-          } else if (pred.className === 'Victory') {
-            setMessage('Victory ✌️');
+        if (pred.probability > 0.7) { // Adjust threshold if needed
+          if (pred.className === 'A') {
+            setMessage('Sign: A 🤟');
+          } else if (pred.className === 'B') {
+            setMessage('Sign: B ✋');
           } else {
             setMessage('');
           }
@@ -40,7 +40,7 @@ const WebCam = () => {
     loadModel();
     const interval = setInterval(() => {
       predict();
-    }, 1000);
+    }, 1000); // Check every 1 second
     return () => clearInterval(interval);
   }, []);
 
